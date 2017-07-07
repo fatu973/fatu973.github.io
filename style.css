@@ -1,8 +1,10 @@
 #header {
-	padding: 200px;
 	margin-top: -20px;
-	height: 600px;
+	height: 100%;
+
+	height: 100vh;
 	width: 100%;
+
 	background: rgba(246,168,156,1);
 	background: -moz-linear-gradient(left, rgba(246,168,156,1) 0%, rgba(246,168,156,1) 8%, rgba(248,89,68,1) 83%, rgba(237,102,90,1) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(246,168,156,1)), color-stop(8%, rgba(246,168,156,1)), color-stop(83%, rgba(248,89,68,1)), color-stop(100%, rgba(237,102,90,1)));
@@ -14,14 +16,45 @@
 
 }
 
-h1 {
-	font-size: 30px;
-}
-
-h2, h4 {
+h1, h2, h4 {
 	text-align:center;
 }
 
 .title {
 	padding-bottom: 20px;
+}
+
+#me {
+	position: absolute;
+	bottom: 200px;
+	display: block;
+	color: white;
+
+}
+
+#name {
+	font-family: 'Herr Von Muellerhoff', cursive;
+	font-size: 13vw;
+}
+
+#me-description {
+	font-size: 3vw;
+}
+
+.scroll-down {
+	position: absolute;
+	display: block;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -16px;
+	width: 10%;
+	height: 10%;
+	color: white;	
+	background: none;
+	border:none;
+	padding: none;
+}
+
+.scroll-down:hover {
+	color:white;
 }
