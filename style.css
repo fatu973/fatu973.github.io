@@ -24,37 +24,56 @@ h1, h2, h4 {
 	padding-bottom: 20px;
 }
 
-#me {
+.centered {
 	position: absolute;
-	bottom: 200px;
-	display: block;
-	color: white;
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	width: 100%;
 
+	/* bring your own prefixes */
+  	transform: translate(-50%, -50%);
+}
+
+#me {	
+	color: white;
 }
 
 #name {
 	font-family: 'Herr Von Muellerhoff', cursive;
-	font-size: 13vw;
+	font-size: 25vh;
 }
 
 #me-description {
-	font-size: 3vw;
+	font-size: 3vh;
 }
 
 .scroll-down {
+	width: 100%;
+
 	position: absolute;
-	display: block;
-	bottom: 30px;
+	bottom: 3vh;
 	left: 50%;
-	margin-left: -16px;
-	width: 10%;
-	height: 10%;
+	transform: translateX(-50%);
+
 	color: white;	
 	background: none;
-	border:none;
-	padding: none;
+	border: none;
+	padding: 5px;
 }
 
-.scroll-down:hover {
-	color:white;
+.scroll-down:link {
+    text-decoration: none;
+}
+
+.scroll-down-text {
+	visibility: hidden;
+}
+
+.scroll-down:hover, .scroll-down:link, .scroll-down:active, .scroll-down:visited{
+	color: white;
+}
+
+.scroll-down:hover .scroll-down-text {
+	visibility: visible;
 }
