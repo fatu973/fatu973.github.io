@@ -30,8 +30,6 @@
 
 	<body>
 
-		<div id="header-background"></div>
-
 		<div id="header" class="header">
 		
 			<div id="me" class="container col-xs-12 col-md-12 text-center centered">
@@ -55,6 +53,12 @@
 				<p> I'm a third year Computer Science student who is always excited to learn. </p>
 				<br/>
 				<p> I'm also a pretty awkward human and "about me" sections are weird, so let's just get straight to it! :)</p>
+				<br/>
+
+				<p>You can grab a copy of my resume here, or scroll down to learn more!</p>
+				<br/>
+
+				<a id="first-resume-button" target="_blank" href="resume.pdf">Grab a resume!</a>
 			</div>
 			
 		</section>
@@ -65,13 +69,15 @@
 
 			<span class="divider"></span>
 
-			<p>Here are some things I know: </p>
-			<br/>
+			<div class="content">
 
-			<ul>
-				<li>Proficient in: Java, C</li>
-				<li>Familiar with: HTML/CSS, Javascript</li>
-			</ul> 
+				<p>Here are some things I know: </p>
+				<br/>
+				<ul>
+					<li>Proficient in: Java, C</li>
+					<li>Familiar with: HTML/CSS, Javascript</li>
+				</ul>
+			</div>
 			
 		</section>	
 
@@ -82,50 +88,76 @@
 			<span class="divider"></span>
 
 			<div class="content">
-				<div class="container-fluid">
 
-					<div class="row">
-						<div class="col-xs-6 col-md-4 col-md-offset-2">
-							<a href="https://fatu973.github.io/Dragon-Chess/" class="thumbnail">
-								<img src="images/dragon-chess.png" alt="Dragon Chess">
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-4 col-md-offset-1">
-							<h3>Dragon Chess!</h3>
-							<p>Two player chess game with extra dragon pieces. </p>
-							<p>Written in JavaScript with JQuery on HTML5 canvas. </p>
-						</div>
+				<div class="project-wrapper">
+					<img src="images/midpoint.png" alt="Midpoint" width="75%">
+					<h3>Midpoint!</h3>
+
+					<p>Created this Android app in a group of 3 team members for our Software Design class. It allows two users to find a meeting place between them, given inputs of of their locations and distances willing to travel, and returns a map of the intersecting areas as well as a list of places in that area. We also wrote unit tests for a large portion of the code. </p>
+					<p>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</p>
+
+					<span class="divider"></span>
+				</div>
+
+				<div class="project-wrapper">
+					<img src="images/website.png" alt="Dragon Chess" width="75%">
+					<h3>This personal website!</h3>
+
+					<div class="project-buttons">
+						<a class="link" target="_blank" href="https://github.com/fatu973/fatu973.github.io">CODE</a>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-6 col-md-4 col-md-offset-2">
-							<a href="https://fatu973.github.io/Brick-Breaker/" class="thumbnail">
-								<img src="images/brick-breaker.png" alt="Brick breaker">
-							</a>
-						</div>
-						<div class="col-xs-6 col-md-4 col-md-offset-1">
-							<h3>Brick Breaker!</h3>
-							<p>Written in JavaScript on HTML5 canvas. </p>
-						</div>
+					<p>My first endeavor with web dev. I taught myself HTML/CSS along the way with resources online and a lot of trial and. This is a constantly changing project, so let me know what you think!</p>
+					<p>Written in HMTL/CSS, amd some JavaScript with JQuery. </p>
+
+					<span class="divider"></span>
+				</div>
+
+
+				<div class="project-wrapper">
+					<img src="images/dragon-chess.png" alt="Dragon Chess" width="75%">
+					<h3>Dragon Chess!</h3>
+
+					<div class="project-buttons">
+						<a class="link" target="_blank" href="https://fatu973.github.io/Dragon-Chess/">DEMO</a>
+						<a class="link" target="_blank" href="https://github.com/fatu973/Dragon-Chess">CODE</a>
 					</div>
+
+					<p>Two player chess game with extra dragon pieces. </p>
+					<p>Written in JavaScript with JQuery on HTML5 canvas. </p>
+
+					<span class="divider"></span>
+				</div>
+
+				<div class="project-wrapper">
+					<img src="images/brick-breaker.png" alt="Brick breaker" width="75%">
+					<h3>Brick Breaker!</h3>
+
+					<div class="project-buttons">
+						<a class="link" target="_blank" href="https://fatu973.github.io/Brick-Breaker/">DEMO</a>
+						<a class="link" target="_blank" href="https://github.com/fatu973/Brick-Breaker">CODE</a>
+					</div>
+
+					<p>Simple Brick Breaker game with three levels. I used this to learn some JavaScript and how to use HTML5 Canvas.</p>
+
+					<p>Written in JavaScript on HTML5 canvas. </p>
+
+					<span class="divider"></span>
 				</div>
 
 			</div>
 
 		</section>
 
-
-		
-
 		<section class="content-section contact" id="contact">
-<div class="contact-background"></div>
+
 			<h1 class="title">Wanna say hi?</h1>
 
 			<span class="divider"></span>
 
-			<div>
+			<div class="content">
 
-				<form action="mailto:fatima.q832@gmail.com" method="post" id="contact-form">
+				<form action="https://formspree.io/fatima.q832@gmail.com" method="post" id="contact-form">
 
 					<div class="input-wrapper">
 						<label class="input-label" for="name">Name:</label>
@@ -164,31 +196,31 @@
 
 	<footer>
 
-		<h3 class="title text-center">Some more things about me...</h3>
+		<h3 class="text-center">Some more things about me...</h3>
 
 		<div class="links text-center">
 
-			<a class="link" href="resume.pdf">
+			<a class="link" target="_blank" href="resume.pdf">
 				<i class="fa fa-file-text-o fa-3x" aria-hidden="true"></i>
 			</a>
 
-			<a class="link" href="mailto:fatima.q832@gmail.com">
-				<i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
-			</a>
-
-			<a class="link" href="https://github.com/fatu973">
+			<a class="link" target="_blank" href="https://github.com/fatu973">
 				<i class="fa fa-github fa-3x" aria-hidden="true"></i>
 			</a>
 			
-			<a class="link" href="https://www.linkedin.com/in/fatima-qarni-062029114/">
+			<a class="link" target="_blank" href="https://www.linkedin.com/in/fatima-qarni-062029114/">
 				<i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
 			</a>
 
-			<a class="link" href="https://www.pinterest.com/ahsima0589/">
+			<a class="link" target="_blank" href="https://www.pinterest.com/ahsima0589/">
 				<i class="fa fa-pinterest-p fa-3x" aria-hidden="true"></i>
 			</a>
 		</div>
 
+		<br/>
+		<p class="text-center">Fatima Qarni 2017</p>
+		<p class="text-center">Background images are from <a class="link text-center" id="upsplash-link" href="https://unsplash.com">Upsplash.</a></p>
+		
 	</footer>
 
 </html>
