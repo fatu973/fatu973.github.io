@@ -1,6 +1,7 @@
 body, html {
 	height: 100%;
 	width: 100%;
+	background: #141d24;
 }
 
 #header-background {
@@ -34,12 +35,9 @@ body, html {
 	left: 0;
 }
 
-h1, h2, h4 {
-	text-align: center;
-}
-
 .title {
 	padding-bottom: 20px;
+	margin: 0px;
 }
 
 .centered {
@@ -57,7 +55,7 @@ h1, h2, h4 {
 	text-shadow: .2vw .2vw black;
 }
 
-#name {
+#my-name {
 	font-family: 'Great Vibes', cursive;
 	font-size: 17vw;
 }
@@ -78,18 +76,126 @@ h1, h2, h4 {
 	text-shadow: 1px 1px black;
 }
 
-.scroll-down:link {
-    text-decoration: none;
-}
-
 .scroll-down-text {
+	font-family: 'Amaranth', sans-serif;
 	visibility: hidden;
 }
 
-.scroll-down:hover, .scroll-down:link, .scroll-down:active, .scroll-down:visited{
+.scroll-down:hover, .scroll-down:link, .scroll-down:active, .scroll-down:visited, 
+.link:hover, .link:link, .link:active, .link:visited{
+	text-decoration: none;
 	color: white;
 }
 
 .scroll-down:hover .scroll-down-text {
 	visibility: visible;
 }
+
+.content-section {
+	background: #141d24;
+	
+	color: white;
+	font-family: 'Amaranth', sans-serif;
+
+	padding: 50px;
+	margin-top: auto;
+
+}
+
+.content > p {
+	margin: 0;
+}
+
+.divider {
+	display: block;
+	margin: 30px 0;
+	width: 200px;
+	height: 4px;
+	background-color: #8f4f60;
+}
+
+footer {
+	background-color: #8f4f60;
+	color: white;
+	font-family: 'Amaranth', sans-serif;
+
+	padding: 30px;
+}
+
+footer > p {
+	margin: 0;
+}
+
+.links {
+	padding: 5px;
+}
+
+.links > a {
+	padding: 10px;
+}
+
+.contact {
+	background: linear-gradient(rgba(20, 29, 36, .8), rgba(20, 29, 36, .8)), url("images/alex-knight-192782.jpg");
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+   
+}
+
+#contact-form {
+	margin: auto;
+	max-width: 800px;
+}
+
+.input-wrapper {
+	display: block;
+}
+
+.input-label {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 15px
+}
+
+.input-box {
+	background: none;
+	border: none;
+	padding: 0px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+.form-line {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	width: 100%;
+	height: 3px;
+	background-color: #8f4f60;
+}
+
+.submit-button {
+	background: none;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	border-style: solid;
+    border-width: 3px;
+    border-color: #8f4f60;
+
+    color: white;
+}
+
+.submit-button:hover {
+	background-color:rgba(143, 79, 96, .5);
+}
+
+
