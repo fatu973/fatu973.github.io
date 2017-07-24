@@ -36,6 +36,12 @@ body, html {
   	transform: translate(-50%, -50%);
 }
 
+.project-image {
+	display: block;
+	width: 75%;
+	margin:auto;
+}
+
 #my-name {
 	font-family: 'Great Vibes', cursive;
 	font-size: 17vw;
@@ -72,6 +78,15 @@ body, html {
 
 .link:hover, #upsplash-link:hover {
 	color: #141d24;
+}
+
+.contact-link, .contact-link.link, .contact-link.active, .contact-link.visited {
+	text-decoration: underline;
+	color: white;
+}
+
+.contact-link:hover {
+	color: #8f4f60;
 }
 
 .scroll-down:hover .scroll-down-text {
