@@ -2,45 +2,208 @@
 
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-		<meta name="author" content="Fatima Qarni">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Fatima Qarni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Fatima Qarni</title>
+    <title>Fatima Qarni</title>
 
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/5578b9fb21.js" crossorigin="anonymous"></script>
+</head>
+
+
+<nav id="vertical-menu">
+    <ul id="menu" class="nav">
+        <li class="menu-link">
+            <a class="actual-link" href="#about"><span class="menu-text">about</span> <span class=circle></span></a>
+        </li>
+        <li class="menu-link">
+            <a class="actual-link" href="#experience"><span class="menu-text">experience</span> <span
+                    class=circle></span></a>
+        </li>
+        <li class="menu-link">
+            <a class="actual-link" href="#portfolio"><span class="menu-text">portfolio</span> <span
+                    class=circle></span></a>
+        </li>
+        <li class="menu-link">
+            <a class="actual-link" href="#contact"><span class="menu-text">contact</span> <span class=circle></span></a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <section id="about">
+        <h1>Hi, I'm
+            <span class="intro"
+                data-rotate='[" Fatima", " a Software Engineer.", " a photographer.", " a rock climber.", " an artist", " Fatima. :)"]'></span>
+        </h1>
+
         <p>
-        Hey! I'm Fatima Qarni :)
-        <br>
-        <br>
-        I'm a Master's in CS student at Northwestern University. I like systems programming and creating clean, scalable software. 
-        <br>
-        When I'm not writing code, you can usually find me rock climbing, painting, 
-        taking <a target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a>, 
-        reading/buying <i>way</i> too many <a href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>, 
-        baking many desserts, updating my vim config <a target="_blank" href="https://github.com/qarni/dotfiles"> <i>again</i><a>, 
-        thinking about getting a pet jellyfish, or moving to Neptune.
-        <br>
-        <br>
-        I'm currently looking for a fall internship!
-        <br>
-        You can check out my resume and other stuff here:
-        <br>
-        <br>
-
-        <a target="_blank" href="https://qarni.github.io/resume.pdf">Resume</a>
-        <br>
-        <a target="_blank" href="https://github.com/qarni">Github</a>
-        <br>
-        <a target="_blank" href="https://www.linkedin.com/in/fatima-qarni/">LinkedIn</a>
-        <br>
-        <a href="mailto:fatima.q832@gmail.com">Send me an email!</a>
-
-
+            > I'm a Master's in CS student @ Northwestern University.
         </p>
-    </body>
+
+        <p>
+            > I like creating scalable software.
+        </p>
+
+        <p> > When I'm not writing code, you can usually find me rock climbing, painting, taking
+            <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a>,
+            reading/buying <i>way</i> too many
+            <a class="link" target="_blank"
+                href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>,
+            baking many desserts, updating my vim config
+            <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a>,
+                    thinking about getting a pet jellyfish, or moving to Neptune.
+        </p>
+
+        <a class="link-button" href="resume.pdf">Grab My Resume</a>
+
+    </section>
+
+    <section id="experience">
+        <h2 class="section-header">Places I've Worked</h2>
+
+        <div class="job-wrapper">
+            <h3 class="job-title">
+                Incoming Software Engineer Intern
+                <span class="job-location">
+                    @ Microsoft (Visual C++)
+                </span></h3>
+            <p class="time-period">Summer 2020</p>
+
+            </p>
+        </div>
+
+        <div class="job-wrapper">
+            <h3 class="job-title">
+                Software Engineer Intern
+                <span class="job-location">
+                    @ Microsoft (Azure SDK)
+                </span></h3>
+            <p class="time-period">Summer 2019</p>
+            <p class="job-description">
+                <li>Developed an extension for the Microsoft Authentication Java library
+                    to allow for single sign on scenarios for the Azure SDK.</li>
+                <li>Created a persistent token cache to replace the in-memory cache,
+                    which allowed for secure storage with encryption using OS specific
+                    Data Protection APIs.</li>
+                <li>Allowed for use across different languages and Microsoft products by
+                    ensuring the cache is thread/process safe.</li>
+
+            </p>
+        </div>
+
+        <div class="job-wrapper">
+            <h3 class="job-title">
+                Software Engineer Intern
+                <span class="job-location">
+                    @ Braintree - a PayPal company (Gateway Sustainability)
+                </span></h3>
+            <p class="time-period">Summer 2018</p>
+            <p class="job-description">
+                <li>I worked on the Gateway Sustainability team to develop patterns and solutions for ease of
+                    development in the Gateway app. </li>
+                <li>I updated Capistrano tasks for deployment of code across servers. </li>
+                <li>I allowed inactive merchant data to be redacted using Ruby on Rails and refactoring slow SQL queries
+                    to make them more efficient. </li>
+
+            </p>
+        </div>
+
+        <div class="job-wrapper">
+            <h3 class="job-title">
+                Undergraduate TA
+                <span class="job-location">
+                    @ UIC CS Department
+                </span></h3>
+            <p class="time-period">2017-2018</p>
+            <p class="job-description">
+                <li>I have TAed for CS 141: Program Design II and CS 107: Intro to Computing and Programming - both of
+                    these classes are taught in C.</li>
+                <li>I held office hours weekly for help on assigned programs and homework. </li>
+                <li>I also facilitated a weekly lab session to allow students to practice material, and assisted
+                    professor with testing/grading of projects. </li>
+
+            </p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-header">My Projects</h2>
+
+        <div class="project-wrapper">
+            <img class="project-image" src="images/canny.png" alt="Canny" width="75%">
+            <h3 class="project-title">Canny Edge Detector With Cuda</h3>
+
+            <div class="project-buttons">
+                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis">CODE</a>
+            </div>
+
+            <p>Parallelizes the five steps of the Canny Algorithm. Produces optimized results that are comparable to an
+                efficient MATLAB implementation..</p>
+
+            <span class="divider"></span>
+        </div>
+
+        <div class="project-wrapper">
+            <img class="project-image" src="images/pensieve.png" alt="Google Pensieve" width="75%">
+            <h3 class="project-title">Google Pensieve</h3>
+
+            <div class="project-buttons">
+                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis">CODE</a>
+            </div>
+
+            <p>Allow a Google user to see what data they have at risk in case of an account breach and understand how to
+                be safer with data storage.</p>
+            <p>Categorize and analyze a user’s photo data using image recognition, photo time and location, as well as
+                other meta data, flags risky documents and shows them to the user.</p>
+            <p>Written in Python, using Google Vision API and Elasticsearch.</p>
+            <span class="divider"></span>
+        </div>
+
+        <div class="project-wrapper">
+            <img class="project-image" src="images/midpoint-app.png" alt="Midpoint" width="75%">
+            <h3 class="project-title">Midpoint</h3>
+
+            <p>Created this Android app in a group of three team members. It allows two users to find a meeting place
+                between them, given inputs of their respective locations and distance willing to travel. It returns a
+                map of the intersecting areas as well as a list of places in that area.</p>
+            <p>We also wrote unit tests for a large portion of the code. </p>
+            <p>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</p>
+            <span class="divider"></span>
+        </div>
+
+
+    </section>
+
+    <section id="contact">
+        <h2 class="section-header">Contact</h2>
+
+        <p>Wanna say hi? Or talk about Harry Potter? Shoot me an email! (My owl is on vacation.)</p>
+
+        <a class="link-button" href="mailto:fatima.q832@gmail.com">Send me an email!</a>
+
+        <div id="contact-icons-wrapper">
+            <a class="contact-icon" target="_blank" href="https://github.com/qarni"><i class="fab fa-github"></i></a>
+
+            <a class="contact-icon" target="_blank" href="https://www.linkedin.com/in/fatima-qarni/"><i
+                    class="fab fa-linkedin-in"></i></a>
+
+            <a class="contact-icon" target="_blank" href="https://www.instagram.com/qarni.photo/"><i
+                    class="fab fa-instagram"></i></a>
+
+        </div>
+
+
+    </section>
+
+</body>
+
 </html>
