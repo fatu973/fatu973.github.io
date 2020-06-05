@@ -21,6 +21,11 @@
 
 <nav id="vertical-menu">
     <ul id="menu" class="nav">
+
+        <a class="menu-icon" onclick="openMenu()">
+            <i class="fas fa-bars"></i> 
+        </a>
+
         <li class="menu-link">
             <a class="actual-link" href="#about"><span class="menu-text">about</span> <span class=circle></span></a>
         </li>
@@ -40,37 +45,36 @@
 
 <body>
     <section id="about">
-        <h1>Hi, I'm
+        <h1>Hi, I'm 
             <span class="intro"
-                data-rotate='[" Fatima", " a Software Engineer.", " a photographer.", " a rock climber.", " an artist", " Fatima. :)"]'></span>
+                data-rotate='["a Software Engineer.", "a photographer.", "a rock climber.", "an artist", "Fatima. :)"]'></span>
         </h1>
 
-        <p>
-            > I'm a Master's in CS student @ Northwestern University.
-        </p>
-
-        <p>
-            > I like creating scalable software.
-        </p>
-
-        <p> > When I'm not writing code, you can usually find me rock climbing, painting, taking
-            <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a>,
-            reading/buying <i>way</i> too many
-            <a class="link" target="_blank"
-                href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>,
-            baking many desserts, updating my vim config
-            <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a>,
-                    thinking about getting a pet jellyfish, or moving to Neptune.
-        </p>
-
-        <a class="link-button" href="resume.pdf">Grab My Resume</a>
+        <div id="about-me-content">
+            <li>I'm a Master's in CS student @ Northwestern University (graduating March 2021!).</li>
+            <li>I like creating clean, scalable software.</li>
+            <li>When I'm not writing code, you can usually find me rock climbing, painting, taking
+                <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a>,
+                reading/buying <i>way</i> too many
+                <a class="link" target="_blank"
+                    href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>,
+                baking many desserts, updating my vim config
+                <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a>,
+                        thinking about getting a pet jellyfish, or moving to Neptune.
+            </li>
+            <a class="link-button" href="resume.pdf">Grab My Resume</a>
+        </div>
 
     </section>
 
     <section id="experience">
-        <h2 class="section-header">Places I've Worked</h2>
+        <h2 class="section-header">Places I've Worked  <span class="divider"></span></h2>
 
-        <div class="job-wrapper">
+        <div id="timeline">
+            <div id="timeline-line"></div>
+        </div>
+
+        <div class="job-wrapper" id="job4">
             <h3 class="job-title">
                 Incoming Software Engineer Intern
                 <span class="job-location">
@@ -81,7 +85,7 @@
             </p>
         </div>
 
-        <div class="job-wrapper">
+        <div class="job-wrapper" id="job3">
             <h3 class="job-title">
                 Software Engineer Intern
                 <span class="job-location">
@@ -100,7 +104,7 @@
             </p>
         </div>
 
-        <div class="job-wrapper">
+        <div class="job-wrapper" id="job2">
             <h3 class="job-title">
                 Software Engineer Intern
                 <span class="job-location">
@@ -117,9 +121,9 @@
             </p>
         </div>
 
-        <div class="job-wrapper">
+        <div class="job-wrapper" id="job1">
             <h3 class="job-title">
-                Undergraduate TA
+                Undergraduate Teaching Assistant
                 <span class="job-location">
                     @ UIC CS Department
                 </span></h3>
@@ -136,48 +140,62 @@
     </section>
 
     <section id="portfolio">
-        <h2 class="section-header">My Projects</h2>
+        <h2 class="section-header">Featured Projects  <span class="divider"></span></h2>
 
-        <div class="project-wrapper">
-            <img class="project-image" src="images/canny.png" alt="Canny" width="75%">
-            <h3 class="project-title">Canny Edge Detector With Cuda</h3>
-
-            <div class="project-buttons">
-                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis">CODE</a>
-            </div>
-
-            <p>Parallelizes the five steps of the Canny Algorithm. Produces optimized results that are comparable to an
-                efficient MATLAB implementation..</p>
+        <div class="project-wrapper" id="canny">
+            <h3 class="project-title">Canny Edge Detector With Cuda 
+                <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
+            </h3>
 
             <span class="divider"></span>
+
+            <img class="project-image" src="images/canny.png" alt="Canny">
+            
+            <div class="project-description">
+                <li>Parallelizes the five steps of the Canny Algorithm. Produces optimized results that are comparable to an
+                efficient MATLAB implementation.</li>
+            </div>
+            
+
         </div>
 
-        <div class="project-wrapper">
-            <img class="project-image" src="images/pensieve.png" alt="Google Pensieve" width="75%">
-            <h3 class="project-title">Google Pensieve</h3>
+        <div class="project-wrapper" id="pensieve">
+            <h3 class="project-title">Google Pensieve
+                <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
+            </h3>
 
-            <div class="project-buttons">
-                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis">CODE</a>
+            <span class="divider"></span>
+
+            <img class="project-image" src="images/pensieve.png" alt="Google Pensieve">
+
+            <div class="project-description">
+                <li>Allow a Google user to see what data they have at risk in case of an account breach and understand how to
+                be safer with data storage.</li>
+                <li>Categorize and analyze a user’s photo data using image recognition, photo time and location, as well as
+                    other meta data, flags risky documents and shows them to the user.</li>
+                <li>Written in Python, using Google Vision API and Elasticsearch.</li>
             </div>
 
-            <p>Allow a Google user to see what data they have at risk in case of an account breach and understand how to
-                be safer with data storage.</p>
-            <p>Categorize and analyze a user’s photo data using image recognition, photo time and location, as well as
-                other meta data, flags risky documents and shows them to the user.</p>
-            <p>Written in Python, using Google Vision API and Elasticsearch.</p>
-            <span class="divider"></span>
+            
+            
         </div>
 
-        <div class="project-wrapper">
-            <img class="project-image" src="images/midpoint-app.png" alt="Midpoint" width="75%">
+        <div class="project-wrapper" id="midpoint">
             <h3 class="project-title">Midpoint</h3>
 
-            <p>Created this Android app in a group of three team members. It allows two users to find a meeting place
-                between them, given inputs of their respective locations and distance willing to travel. It returns a
-                map of the intersecting areas as well as a list of places in that area.</p>
-            <p>We also wrote unit tests for a large portion of the code. </p>
-            <p>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</p>
             <span class="divider"></span>
+
+            <img class="project-image" src="images/midpoint-app.png" alt="Midpoint">
+
+            <div class="project-description">
+                <li>Created this Android app in a group of three team members. It allows two users to find a meeting place
+                between them, given inputs of their respective locations and distance willing to travel. It returns a
+                map of the intersecting areas as well as a list of places in that area.</li>
+                <li>We also wrote unit tests for a large portion of the code. </li>
+                <li>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</li>
+            </div>
+            
+           
         </div>
 
 
@@ -188,9 +206,14 @@
 
         <p>Wanna say hi? Or talk about Harry Potter? Shoot me an email! (My owl is on vacation.)</p>
 
+        <p>I'm currently looking for a fall internship!</p>
+
         <a class="link-button" href="mailto:fatima.q832@gmail.com">Send me an email!</a>
 
         <div id="contact-icons-wrapper">
+
+            <h3>Some more things about me!</h3>
+
             <a class="contact-icon" target="_blank" href="https://github.com/qarni"><i class="fab fa-github"></i></a>
 
             <a class="contact-icon" target="_blank" href="https://www.linkedin.com/in/fatima-qarni/"><i
@@ -198,7 +221,8 @@
 
             <a class="contact-icon" target="_blank" href="https://www.instagram.com/qarni.photo/"><i
                     class="fab fa-instagram"></i></a>
-
+                    
+            <a class="contact-icon" target="_blank" href="https://codepen.io/qarni"><i class="fab fa-codepen"></i></a>
         </div>
 
 
