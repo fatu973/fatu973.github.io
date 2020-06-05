@@ -2,6 +2,7 @@
 
 function init() {
   setMenu();
+  // setProjectMenu();
 }
 
 // menu buttons, update active on click/scroll --------------------------------
@@ -9,8 +10,6 @@ function setMenu() {
   var menuContainer = document.getElementById("menu");
   var menuLinks = menuContainer.getElementsByClassName("menu-link");
   menuLinks = Array.prototype.slice.call(menuLinks)
-
-  // console.log(menuLinks)
 
   // initially make the first link the active link
   menuLinks[0].classList.add("active")
@@ -40,8 +39,7 @@ function setMenu() {
     })
   }
 
-  // on scroll listener 
-
+  // on scroll listener todo
 
 }
 
@@ -52,6 +50,24 @@ function openMenu() {
   } else {
     menu.className = "nav";
   }
+}
+
+// project menu ---------------------------------------------------------------
+function changeProjectView(project) {
+  var link = project + "-link"
+  console.log(link)
+
+  var prevActive = document.getElementsByClassName("active-proj-link");
+  prevActive[0].classList.remove("active-proj-link");
+
+  var link_obj = document.getElementById(link)
+  link_obj.classList.add("active-proj-link")
+
+  var prevActive = document.getElementsByClassName("active-proj");
+  prevActive[0].classList.remove("active-proj");
+
+  var proj_obj = document.getElementById(project)
+  proj_obj.classList.add("active-proj")
 }
 
 // TypeWriter effect ----------------------------------------------------

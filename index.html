@@ -51,18 +51,24 @@
         </h1>
 
         <div id="about-me-content">
-            <li>I'm a Master's in CS student @ Northwestern University (graduating March 2021!).</li>
-            <li>I like creating clean, scalable software.</li>
-            <li>When I'm not writing code, you can usually find me rock climbing, painting, taking
-                <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a>,
-                reading/buying <i>way</i> too many
-                <a class="link" target="_blank"
-                    href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>,
-                baking many desserts, updating my vim config
-                <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a>,
-                        thinking about getting a pet jellyfish, or moving to Neptune.
+            <li>I'm a Master's in CS student @ Northwestern University.</li>
+            <li>I like creating scalable software, learning about distributed systems & HPC.</li>
+            <p>When I'm not writing code, you can usually find me... </p>
+            <li>rock climbing </li>
+            <li>painting</li> 
+            <li>taking <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a></li>
+            <li>reading/buying <i>way</i> too many 
+                <a class="link" target="_blank" href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>
             </li>
+            <li>updating my vim config <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a> </li>
+            <li>thinking about getting a pet jellyfish </li>
+            <li>or moving to Neptune.</li>
+            
             <a class="link-button" href="resume.pdf">Grab My Resume</a>
+
+            <p>Or, see more cool stuff below 
+                <a href="#experience"><i class="fas fa-long-arrow-alt-down" id="down-arrow"></i></a>
+            </p>
         </div>
 
     </section>
@@ -142,7 +148,15 @@
     <section id="portfolio">
         <h2 class="section-header">Featured Projects  <span class="divider"></span></h2>
 
-        <div class="project-wrapper" id="canny">
+        <div class="project-menu">
+            <p>Check out these projects! Or look at all of my project on my GitHub.</p>
+            <a class="project-link active-proj-link" id="canny-link" onclick="changeProjectView('canny')"><span class="project-num">.001</span> Canny</a>
+            <a class="project-link" id="pensieve-link" onclick="changeProjectView('pensieve')"><span class="project-num">.002</span> Google Pensieve</a>
+            <a class="project-link" id="midpoint-link" onclick="changeProjectView('midpoint')"><span class="project-num">.003</span> Midpoint</a>
+        </div>
+
+
+        <div class="project-wrapper active-proj" id="canny">
             <h3 class="project-title">Canny Edge Detector With Cuda 
                 <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
             </h3>

@@ -15,7 +15,7 @@ section {
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 55px;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .section-header {
@@ -25,7 +25,7 @@ section {
 .divider {
     display: inline-block;
 	margin: 0px 0px 10px;
-	width: 40%;
+	width: 30%;
 	height: 1px;
     background-color: #8f4f60;
     top: 50%;
@@ -33,7 +33,6 @@ section {
 
 * {
     font-family: "Courier New", monospace;
-    background: #141d24;
     color: white;
   }
   
@@ -43,7 +42,7 @@ section {
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 55px;
-    max-width: 700px;
+    /* max-width: 700px; */
   }
 
 /* NAV ------------------------------------------------ */
@@ -130,6 +129,8 @@ section {
       margin-top: 0;
       margin-right: 0;
       padding-right: 10px;
+
+      background: #141d24;
     }
 
   
@@ -255,19 +256,60 @@ section {
     font-size: 30px;
 }
 
+.project-link:hover, .project-link:hover .project-num {
+    color: #8f4f60;
+    list-style-type: none;
+}
+
+.project-num {
+    color: gray;
+}
+
+.project-link {
+    list-style-type: none;
+    display: inline;
+
+    border-right: gray;
+
+    margin-right: 10px;
+}
+.project-link.active-proj-link {
+   text-decoration: underline;
+}
+
+.project-menu {
+    display: inline-block;
+    text-align: center;
+}
+
+/*only show project if link is clicked*/ 
+.project-wrapper {
+    display: none;
+}
+
+.project-wrapper.active-proj {
+    display: block;
+}
+
 /* about ------------------------------------------------ */
 
 h1 {
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .intro {
     border-right: 0.08em solid #666;
 }
 
-#about-me-content > li {
-    padding-top: 20px;
+#about-me-content > li,
+ #about-me-content > p, 
+ #about-me-content > li * {
+    padding-top: 10px;
     font-size: 16px;
+}
+
+#down-arrow {
+    font-size: 30px;
 }
 
 /* jobs/timeline ------------------------------------------------ */
@@ -278,8 +320,4 @@ h1 {
 
 .job-location {
     color: #b77b8b;
-}
-
-#contact-icons-wrapper {
-    
 }
