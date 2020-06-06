@@ -9,13 +9,16 @@ body {
 
 section {
     /* height: 100vh; */
-    /* min-height: 100%; */
-    
+    min-height: 100%;
     
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 55px;
     max-width: 900px;
+}
+
+#contact {
+  height: 100vh;
 }
 
 .section-header {
@@ -230,21 +233,14 @@ section {
 }
 
 .project-image {
-    width: 75%;
-
-    margin-left: 12%;
+    width: 70%;
 }
 
 .project-description {
     display: inline-block;
-    background-color: #243542;
     
     padding: 10px;
     margin-top: 20px;
-
-    border: dashed;
-    border-width: 1px;
-    border-color: white;
 }
 
 .project-description > li {
@@ -256,39 +252,100 @@ section {
     font-size: 30px;
 }
 
-.project-link:hover, .project-link:hover .project-num {
-    color: #8f4f60;
-    list-style-type: none;
-}
-
 .project-num {
     color: gray;
 }
 
-.project-link {
-    list-style-type: none;
-    display: inline;
-
-    border-right: gray;
-
-    margin-right: 10px;
-}
-.project-link.active-proj-link {
-   text-decoration: underline;
-}
-
 .project-menu {
-    display: inline-block;
-    text-align: center;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, 280px);
+
+  grid-gap: 20px;
+
+  max-width: 1100px;
 }
 
-/*only show project if link is clicked*/ 
-.project-wrapper {
-    display: none;
+.project-square {
+  background-color: #1b2731;
+  height: 280px;
+
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
+  text-align: center;
+  display: block;
+
+  border-radius: 4px;
 }
 
-.project-wrapper.active-proj {
-    display: block;
+.project-square:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-square > .title {
+  font-size: 20px;
+
+  margin: 10px;
+  margin-top: 60px;
+}
+ 
+.project-square > .link {
+  font-size: 25px;
+
+  float: right;
+  margin: 15px;
+}
+
+.project-square  li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.project-square > .tools {
+  font-size: 15px;
+  color: gray;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* only show project if square is clicked... modals............... */ 
+/* Reference: https://www.w3schools.com/howto/howto_css_modals.asp */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #141d24;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #8f4f60;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* about ------------------------------------------------ */

@@ -23,7 +23,7 @@
     <ul id="menu" class="nav">
 
         <a class="menu-icon" onclick="openMenu()">
-            <i class="fas fa-bars"></i> 
+            <i class="fas fa-bars"></i>
         </a>
 
         <li class="menu-link">
@@ -45,36 +45,38 @@
 
 <body>
     <section id="about">
-        <h1>Hi, I'm 
+        <h1>Hi, I'm
             <span class="intro"
                 data-rotate='["a Software Engineer.", "a photographer.", "a rock climber.", "an artist", "Fatima. :)"]'></span>
         </h1>
 
         <div id="about-me-content">
-            <li>I'm a Master's in CS student @ Northwestern University.</li>
+            <li>I'm a CS Masters student @ Northwestern University.</li>
             <li>I like creating scalable software, learning about distributed systems & HPC.</li>
             <p>When I'm not writing code, you can usually find me... </p>
             <li>rock climbing </li>
-            <li>painting</li> 
+            <li>painting</li>
             <li>taking <a class="link" target="_blank" href="https://www.instagram.com/qarni.photo/">pictures</a></li>
-            <li>reading/buying <i>way</i> too many 
-                <a class="link" target="_blank" href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>
+            <li>reading/buying <i>way</i> too many
+                <a class="link" target="_blank"
+                    href="https://www.goodreads.com/review/list/73995288-fatima?shelf=current-faves&view=covers">books</a>
             </li>
-            <li>updating my vim config <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i>again</i><a> </li>
+            <li>updating my vim config <a class="link" target="_blank"
+                    href="https://github.com/qarni/dotfiles"><i>again</i><a> </li>
             <li>thinking about getting a pet jellyfish </li>
             <li>or moving to Neptune.</li>
-            
+
             <a class="link-button" href="resume.pdf">Grab My Resume</a>
 
-            <p>Or, see more cool stuff below 
-                <a href="#experience"><i class="fas fa-long-arrow-alt-down" id="down-arrow"></i></a>
+            <p>Or, see more cool stuff below
+                <a href="#experience"><i class="fas fa-sort-down" id="down-arrow"></i></a>
             </p>
         </div>
 
     </section>
 
     <section id="experience">
-        <h2 class="section-header">Places I've Worked  <span class="divider"></span></h2>
+        <h2 class="section-header">Places I've Worked <span class="divider"></span></h2>
 
         <div id="timeline">
             <div id="timeline-line"></div>
@@ -135,8 +137,6 @@
                 </span></h3>
             <p class="time-period">2017-2018</p>
             <p class="job-description">
-                <li>I have TAed for CS 141: Program Design II and CS 107: Intro to Computing and Programming - both of
-                    these classes are taught in C.</li>
                 <li>I held office hours weekly for help on assigned programs and homework. </li>
                 <li>I also facilitated a weekly lab session to allow students to practice material, and assisted
                     professor with testing/grading of projects. </li>
@@ -146,77 +146,153 @@
     </section>
 
     <section id="portfolio">
-        <h2 class="section-header">Featured Projects  <span class="divider"></span></h2>
+        <h2 class="section-header">Featured Projects <span class="divider"></span></h2>
+
+        <p>Check out these projects! Or look at all of my project on my <a class="link" target="_blank"
+                href="https://github.com/qarni">GitHub</a>.</p>
 
         <div class="project-menu">
-            <p>Check out these projects! Or look at all of my project on my GitHub.</p>
-            <a class="project-link active-proj-link" id="canny-link" onclick="changeProjectView('canny')"><span class="project-num">.001</span> Canny</a>
-            <a class="project-link" id="pensieve-link" onclick="changeProjectView('pensieve')"><span class="project-num">.002</span> Google Pensieve</a>
-            <a class="project-link" id="midpoint-link" onclick="changeProjectView('midpoint')"><span class="project-num">.003</span> Midpoint</a>
-        </div>
+            <div class="project-square " id="canny-link">
+                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i
+                        class="fab fa-github"></i></a>
+                <div class="title"><span class="project-num">.01</span> Canny Edge Detector with CUDA</div>
 
-
-        <div class="project-wrapper active-proj" id="canny">
-            <h3 class="project-title">Canny Edge Detector With Cuda 
-                <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
-            </h3>
-
-            <span class="divider"></span>
-
-            <img class="project-image" src="images/canny.png" alt="Canny">
-            
-            <div class="project-description">
-                <li>Parallelizes the five steps of the Canny Algorithm. Produces optimized results that are comparable to an
-                efficient MATLAB implementation.</li>
+                <div class="description">
+                    <li>Parallelizes the five steps of the Canny Algorithm using CUDA.</li>
+                </div>
+                <div class="tools">C, CUDA</div>
             </div>
-            
-
+            <div class="project-square" id="pensieve-link">
+                <a class="link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i
+                        class="fab fa-github"></i></a>
+                <div class="title"><span class="project-num">.02</span> Google Pensieve</div>
+                <div class="description">
+                    <li>Allow a Google user to see what data they have at risk in case of an account breach &
+                        understand how to be safer with data storage.</li>
+                </div>
+                <div class="tools">Python, Google Vision, Elasticsearch, Plot.ly</div>
+            </div>
+            <div class="project-square" id="midpoint-link">
+                <div class="title"><span class="project-num">.03</span> Midpoint</div>
+                <div class="description">
+                    <li>Helps two users find somewhere to meet!</li>
+                </div>
+                <div class="tools">Java, JUnit, Google Maps, YELP</div>
+            </div>
+            <div class="project-square" id="dotfiles-link">
+                <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i
+                        class="fab fa-github"></i></a>
+                <div class="title"><span class="project-num">.04</span> Vim (& other) Config</div>
+                <div class="description">
+                    <li>All my configs because why not?</li>
+                </div>
+            </div>
         </div>
 
-        <div class="project-wrapper" id="pensieve">
-            <h3 class="project-title">Google Pensieve
-                <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
-            </h3>
 
-            <span class="divider"></span>
+        <div class="project-wrapper modal" id="canny">
+            <div class="modal-content">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <h3 class="project-title">Canny Edge Detector With Cuda
+                    <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i class="fab fa-github"></i></a>
+                </h3>
 
-            <img class="project-image" src="images/pensieve.png" alt="Google Pensieve">
+                <span class="divider"></span>
 
-            <div class="project-description">
-                <li>Allow a Google user to see what data they have at risk in case of an account breach and understand how to
-                be safer with data storage.</li>
-                <li>Categorize and analyze a user’s photo data using image recognition, photo time and location, as well as
-                    other meta data, flags risky documents and shows them to the user.</li>
-                <li>Written in Python, using Google Vision API and Elasticsearch.</li>
+                <img class="project-image" src="images/canny.png" alt="Canny">
+
+                <div class="project-description">
+                    <li>Parallelizes the five steps of the Canny Algorithm. Produces optimized results that are
+                        comparable
+                        to an
+                        efficient MATLAB implementation.</li>
+                </div>
             </div>
 
-            
-            
+
         </div>
 
-        <div class="project-wrapper" id="midpoint">
-            <h3 class="project-title">Midpoint</h3>
+        <div class="project-wrapper modal" id="pensieve">
+            <div class="modal-content">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <h3 class="project-title">Google Pensieve
+                    <a class="code-link" target="_blank" href="https://github.com/qarni/Google-Data-Analysis"><i
+                            class="fab fa-github"></i></a>
+                </h3>
 
-            <span class="divider"></span>
+                <span class="divider"></span>
 
-            <img class="project-image" src="images/midpoint-app.png" alt="Midpoint">
+                <img class="project-image" src="images/pensieve.png" alt="Google Pensieve">
 
-            <div class="project-description">
-                <li>Created this Android app in a group of three team members. It allows two users to find a meeting place
-                between them, given inputs of their respective locations and distance willing to travel. It returns a
-                map of the intersecting areas as well as a list of places in that area.</li>
-                <li>We also wrote unit tests for a large portion of the code. </li>
-                <li>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</li>
+                <div class="project-description">
+                    <li>Allow a Google user to see what data they have at risk in case of an account breach and
+                        understand
+                        how to
+                        be safer with data storage.</li>
+                    <li>Categorize and analyze a user’s photo data using image recognition, photo time and location, as
+                        well
+                        as
+                        other meta data, flags risky documents and shows them to the user.</li>
+                    <li>Written in Python, using Google Vision API and Elasticsearch.</li>
+                </div>
             </div>
-            
-           
+
+
+
+
         </div>
 
+        <div class="project-wrapper modal" id="midpoint">
+            <div class="modal-content">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <h3 class="project-title">Midpoint</h3>
+
+                <span class="divider"></span>
+
+                <img class="project-image" src="images/midpoint-app.png" alt="Midpoint">
+
+                <div class="project-description">
+                    <li>Created this Android app in a group of three team members. It allows two users to find a meeting
+                        place
+                        between them, given inputs of their respective locations and distance willing to travel. It
+                        returns
+                        a
+                        map of the intersecting areas as well as a list of places in that area.</li>
+                    <li>We also wrote unit tests for a large portion of the code. </li>
+                    <li>Written in Java using Android Studio, and incorporates the Google Maps API and YELP API.</li>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="project-wrapper modal" id="dotfiles">
+            
+            <div class="modal-content">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <h3 class="project-title">Dotfiles
+                    <a class="link" target="_blank" href="https://github.com/qarni/dotfiles"><i
+                        class="fab fa-github"></i></a>
+                </h3>
+
+                <span class="divider"></span>
+
+                <img class="project-image" src="images/dotfiles.png" alt="Vim">
+
+                <div class="project-description">
+                    <li>Vim Dotfiles and more</li>
+                </div>
+            </div>
+
+
+
+        </div>
 
     </section>
 
     <section id="contact">
-        <h2 class="section-header">Contact</h2>
+        <h2 class="section-header">Contact <span class="divider"></span></h2>
 
         <p>Wanna say hi? Or talk about Harry Potter? Shoot me an email! (My owl is on vacation.)</p>
 
@@ -235,7 +311,7 @@
 
             <a class="contact-icon" target="_blank" href="https://www.instagram.com/qarni.photo/"><i
                     class="fab fa-instagram"></i></a>
-                    
+
             <a class="contact-icon" target="_blank" href="https://codepen.io/qarni"><i class="fab fa-codepen"></i></a>
         </div>
 

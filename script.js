@@ -2,7 +2,7 @@
 
 function init() {
   setMenu();
-  // setProjectMenu();
+  setProjectModals();
 }
 
 // menu buttons, update active on click/scroll --------------------------------
@@ -52,25 +52,43 @@ function openMenu() {
   }
 }
 
-// project menu ---------------------------------------------------------------
-function changeProjectView(project) {
-  var link = project + "-link"
-  console.log(link)
+// project modals ---------------------------------------------------------------
+function setProjectModals() {
+  var modals = document.getElementsByClassName("modal");
+  console.log(modals);
 
-  var prevActive = document.getElementsByClassName("active-proj-link");
-  prevActive[0].classList.remove("active-proj-link");
+  for (var i = 0; i < modals.length; i++) {
+    let currModal = modals[i];
 
-  var link_obj = document.getElementById(link)
-  link_obj.classList.add("active-proj-link")
+    let id = currModal.id;
+    let square = document.getElementById(id + "-link")
+    let span = currModal.getElementsByClassName("close")[0];
 
-  var prevActive = document.getElementsByClassName("active-proj");
-  prevActive[0].classList.remove("active-proj");
+    // When the user clicks on the button, open the modal
+    square.onclick = function () {
+      currModal.style.display = "block";
+    }
 
-  var proj_obj = document.getElementById(project)
-  proj_obj.classList.add("active-proj")
+    // When the user clicks on x, close the modal
+    span.onclick = function () {
+      currModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      console.log(event.target, currModal, modals[i])
+      if (event.target.classList[1] == "modal") {
+        
+        modals[i].style.display = "none";
+      }
+    }
+
+  }
+
 }
 
 // TypeWriter effect ----------------------------------------------------
+// reference: https://codepen.io/gschier/pen/jkivt?editors=1010
 
 function TypeWriter() {
   var introList = document.getElementsByClassName('intro');
