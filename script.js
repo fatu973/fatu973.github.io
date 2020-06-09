@@ -76,10 +76,8 @@ function setProjectModals() {
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      console.log(event.target, currModal, modals[i])
       if (event.target.classList[1] == "modal") {
-        
-        modals[i].style.display = "none";
+        event.target.style.display = "none";
       }
     }
 
@@ -111,7 +109,6 @@ var TxtRotate = function (currPhrase, toRotate, waitPeriod) {
 };
 
 TxtRotate.prototype.tick = function () {
-  // console.log(this.toRotate)
   var i = this.loopNum;
   if (i < this.toRotate.length) {
     var fullTxt = this.toRotate[i];
